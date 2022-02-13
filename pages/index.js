@@ -25,5 +25,6 @@ export async function getStaticProps() {
 
   return {
     props: { youtubeIds },
+    revalidate: 60,
   };
 }
