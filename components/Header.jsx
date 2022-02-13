@@ -16,7 +16,7 @@ const Header = () => {
               ANA SAYFA
             </span>
           </Link>
-          <Link href={`blogs`}>
+          <Link href={`/blogs`}>
             <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
               BLOG
             </span>
