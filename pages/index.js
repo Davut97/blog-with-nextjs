@@ -1,36 +1,29 @@
 import Head from "next/head";
-import { PostCard, PostWidget, Categories } from "../components/index";
-import { getPosts } from "../services";
+import { PostCard, PostWidget, Categories, YoutubeVideos } from "../components/index";
+import { getPosts, getYoutubeVideosLink } from "../services";
 import { FeaturedPosts } from "../sections";
-export default function Home({ posts }) {
+export default function Home({ youtubeIds }) {
   return (
-    <div className="container mx-auto px-10 mb-8">
+    <div className='container mx-auto px-10 mb-8'>
       <FeaturedPosts />
       <Head>
-        <title>blog</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>pisiranadam</title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
-          {posts.map((post, index) => (
-            <PostCard post={post.node} key={post.title} />
-          ))}
-        </div>
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relatve top-8">
-            <PostWidget />
-            <Categories />
-          </div>
-        </div>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 '>
+        {youtubeIds.map((videoId, index) => (
+          <YoutubeVideos videosLink={videoId.videosLink} key={videoId.videosLink} />
+        ))}
       </div>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const youtubeIds = (await getYoutubeVideosLink()) || [];
+
   return {
-    props: { posts },
+    props: { youtubeIds },
   };
 }
