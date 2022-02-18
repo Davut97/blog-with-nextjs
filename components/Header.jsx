@@ -4,10 +4,10 @@ import { getCategories } from "../services";
 const Header = () => {
   return (
     <div className='container mx-auto px-2 mb-8  sm:text-center'>
-      <div className='w-full inline-block  py-8 text-[#E5A73E]'>
-        <div className='md:float-left block sm:text-center'>
+      <div className='w-full inline-block  py-8 text-[#E5A73E] text-center'>
+        <div className='md:float-left block text-center sm:float-right mb-4 '>
           <Link href='/'>
-            <span className='cursor-pointer font-bold text-5xl text-[#E5A73E] sm:text-center'>
+            <span className='cursor-pointer font-bold text-5xl text-[#E5A73E] sm:text-center '>
               pisirenadam
             </span>
           </Link>
