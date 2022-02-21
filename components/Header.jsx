@@ -15,17 +15,23 @@ const Header = () => {
         <div className=' md:float-right md:contents sm:text-center md:pt-5'>
           <Link href={`/contact`}>
             <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
-              ILTESIM
+              İletişim
+            </span>
+          </Link>
+
+          <a href='https://mercure.nmq.digital/news/' target='_blank'>
+            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
+              Shop
+            </span>
+          </a>
+          <Link href={`/`}>
+            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
+              Anasayfa
             </span>
           </Link>
           <Link href={`/blogs`}>
             <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
-              BLOG
-            </span>
-          </Link>
-          <Link href={`/`}>
-            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
-              ANA SAYFA
+              Blog
             </span>
           </Link>
         </div>
