@@ -101,7 +101,7 @@ const index = () => {
                         className='border-2 border-indigo-600 rounded px-6 py-2 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors duration-300'
                       >
                         mesaj gönder
-                        <i class='fas fa-chevron-right ml-2 text-sm'></i>
+                        <i className='fas fa-chevron-right ml-2 text-sm'></i>
                       </button>
                     </div>
                   </div>

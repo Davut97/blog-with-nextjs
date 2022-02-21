@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { getCategories } from "../services";
 const Header = () => {
   return (
     <div className='container mx-auto px-2 mb-8  sm:text-center'>
@@ -12,26 +11,24 @@ const Header = () => {
             </span>
           </Link>
         </div>
+
         <div className=' md:float-right md:contents sm:text-center md:pt-5'>
           <Link href={`/contact`}>
-            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
+            <span className='md:float-right mt-2  ml-4 font-semibold  cursor-pointer'>
               İletişim
             </span>
           </Link>
 
           <a href='https://mercure.nmq.digital/news/' target='_blank'>
-            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
-              Shop
-            </span>
+            <span className='md:float-right mt-2 ml-4 font-semibold  cursor-pointer'>Shop</span>
           </a>
-          <Link href={`/`}>
-            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
-              Anasayfa
-            </span>
-          </Link>
+
           <Link href={`/blogs`}>
-            <span className='md:float-right mt-2 align-right ml-4 font-semibold  cursor-pointer'>
-              Blog
+            <span className='md:float-right mt-2 ml-4 font-semibold  cursor-pointer'>Blog</span>
+          </Link>
+          <Link href={`/`}>
+            <span className='md:float-right mt-2  ml-4 font-semibold  cursor-pointer'>
+              Anasayfa
             </span>
           </Link>
         </div>
